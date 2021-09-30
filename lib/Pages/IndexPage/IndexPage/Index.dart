@@ -269,113 +269,122 @@ class IndexPage extends GetView<IndexController> {
                                       top: 40.h,
                                       bottom: 40.h,
                                     ),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Text(
-                                              "${indexC.listView[index]['title']}",
-                                              style: TextStyle(
-                                                  fontSize: 32.sp,
-                                                  color: Color(0xff171717),
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            SizedBox(
-                                              height: 24.h,
-                                            ),
-                                            Row(
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  "${indexC.listView[index]['money']}",
+                                                  "${indexC.listView[index]['title']}",
                                                   style: TextStyle(
-                                                      fontSize: 36.sp,
-                                                      color: Color(0xffFF5B0B),
+                                                      fontSize: 32.sp,
+                                                      color: Color(0xff171717),
                                                       fontWeight:
                                                           FontWeight.bold),
                                                 ),
-                                                Text(
-                                                  "元/次",
-                                                  style: TextStyle(
-                                                      fontSize: 24.sp,
-                                                      color: Color(0xffFF5B0B),
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                SizedBox(
+                                                  height: 20.h,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "${indexC.listView[index]['money']}",
+                                                      style: TextStyle(
+                                                          fontSize: 36.sp,
+                                                          color:
+                                                              Color(0xffFF5B0B),
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    ),
+                                                    Text(
+                                                      "元/次",
+                                                      style: TextStyle(
+                                                          fontSize: 24.sp,
+                                                          color:
+                                                              Color(0xffFF5B0B),
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
-                                              height: 24.h,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Text(
-                                                  "${indexC.listView[index]['type']} | ",
-                                                  style: TextStyle(
-                                                    fontSize: 24.sp,
-                                                    color: indexC.typeContext(
-                                                        '${indexC.listView[index]['type']}'),
-                                                  ),
+                                            Container(
+                                              height: 70.h,
+                                              width: 160.w,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(35.0.sp)),
+                                                gradient: LinearGradient(
+                                                  begin: Alignment.centerLeft,
+                                                  end: Alignment.centerRight,
+                                                  colors: [
+                                                    Color(0xffFC6821),
+                                                    Color(0xffFF863D),
+                                                  ],
                                                 ),
-                                                Text(
-                                                  "已付${indexC.listView[index]['cash']}工资 | ",
-                                                  style: TextStyle(
-                                                    fontSize: 24.sp,
-                                                    color: Color(0xff646C7F),
-                                                  ),
-                                                ),
-                                                Text(
-                                                  "${indexC.listView[index]['time']}分钟完成",
-                                                  style: TextStyle(
-                                                    fontSize: 24.sp,
-                                                    color: Color(0xff646C7F),
-                                                  ),
-                                                ),
-                                              ],
+                                              ),
+                                              child: TextButton(
+                                                  onPressed: () => Get.toNamed(
+                                                      Routes.TaskInfo),
+                                                  child: Text(
+                                                    '去赚钱',
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 25.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ), //背景颜色
+                                                  style: ButtonStyle(
+                                                    shape: MaterialStateProperty
+                                                        .all(
+                                                      RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                          Radius.circular(
+                                                              10.sp),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  )),
                                             ),
                                           ],
                                         ),
                                         SizedBox(
-                                          height: 10.h,
+                                          height: 20.h,
                                         ),
-                                        Container(
-                                          height: 70.h,
-                                          width: 160.w,
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(35.0.sp)),
-                                            gradient: LinearGradient(
-                                              begin: Alignment.centerLeft,
-                                              end: Alignment.centerRight,
-                                              colors: [
-                                                Color(0xffFC6821),
-                                                Color(0xffFF863D),
-                                              ],
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "${indexC.listView[index]['type']} | ",
+                                              style: TextStyle(
+                                                fontSize: 24.sp,
+                                                color: indexC.typeContext(
+                                                    '${indexC.listView[index]['type']}'),
+                                              ),
                                             ),
-                                          ),
-                                          child: TextButton(
-                                              onPressed: () =>
-                                                  Get.toNamed(Routes.TaskInfo),
-                                              child: Text(
-                                                '去赚钱',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 25.sp),
-                                              ), //背景颜色
-                                              style: ButtonStyle(
-                                                shape:
-                                                    MaterialStateProperty.all(
-                                                  RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                      Radius.circular(10.sp),
-                                                    ),
-                                                  ),
-                                                ),
-                                              )),
+                                            Text(
+                                              "已付${indexC.listView[index]['cash']}工资 | ",
+                                              style: TextStyle(
+                                                fontSize: 24.sp,
+                                                color: Color(0xff646C7F),
+                                              ),
+                                            ),
+                                            Text(
+                                              "${indexC.listView[index]['time']}分钟完成",
+                                              style: TextStyle(
+                                                fontSize: 24.sp,
+                                                color: Color(0xff646C7F),
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ],
                                     ),

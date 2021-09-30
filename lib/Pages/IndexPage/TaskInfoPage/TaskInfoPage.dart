@@ -89,6 +89,7 @@ class TaskInfoPage extends GetView<TaskInfoController> {
                     ],
                   ),
                   Divider(),
+                  SizedBox(height: 20.h,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [

@@ -35,7 +35,7 @@ class TaskPage extends GetView<TaskController> {
                 Text("关注分享"),
                 Text("问卷调查"),
                 Text("极限挑战"),
-              ], task.tabController,Alignment.center,true),
+              ], task.tabController, Alignment.center, true),
             ),
             Expanded(
                 child: TabBarView(controller: task.tabController, children: [
@@ -60,7 +60,7 @@ class TaskPage extends GetView<TaskController> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 1,
                 // 设置每子元素的大小（宽高比）
-                childAspectRatio: 2.8,
+                childAspectRatio: 3,
               ),
               itemBuilder: (context, index) {
                 if (index == task.listView.length) {
@@ -92,42 +92,83 @@ class TaskPage extends GetView<TaskController> {
                       top: 40.h,
                       bottom: 40.h,
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
+                    child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "${task.listView[index]['title']}",
-                              style: TextStyle(
-                                  fontSize: 32.sp,
-                                  color: Color(0xff171717),
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 24.h,
-                            ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  "${task.listView[index]['money']}",
-                                  style: TextStyle(
-                                      fontSize: 36.sp,
-                                      color: Color(0xffFF5B0B),
-                                      fontWeight: FontWeight.bold),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "${task.listView[index]['title']}",
+                                      style: TextStyle(
+                                          fontSize: 32.sp,
+                                          color: Color(0xff171717),
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "${task.listView[index]['money']}",
+                                          style: TextStyle(
+                                              fontSize: 36.sp,
+                                              color: Color(0xffFF5B0B),
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          "元/次",
+                                          style: TextStyle(
+                                              fontSize: 24.sp,
+                                              color: Color(0xffFF5B0B),
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  "元/次",
-                                  style: TextStyle(
-                                      fontSize: 24.sp,
-                                      color: Color(0xffFF5B0B),
-                                      fontWeight: FontWeight.bold),
+                                Container(
+                                  height: 70.h,
+                                  width: 160.w,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(35.0.sp)),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight,
+                                      colors: [
+                                        Color(0xffFC6821),
+                                        Color(0xffFF863D),
+                                      ],
+                                    ),
+                                  ),
+                                  child: TextButton(
+                                      onPressed: () =>
+                                          Get.toNamed(Routes.TaskInfo),
+                                      child: Text(
+                                        '去赚钱',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 25.sp,fontWeight: FontWeight.bold),
+                                      ), //背景颜色
+                                      style: ButtonStyle(
+                                        shape: MaterialStateProperty.all(
+                                          RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                              Radius.circular(10.sp),
+                                            ),
+                                          ),
+                                        ),
+                                      )),
                                 ),
                               ],
                             ),
                             SizedBox(
-                              height: 24.h,
+                              height: 20.h,
                             ),
                             Row(
                               children: [
@@ -157,43 +198,6 @@ class TaskPage extends GetView<TaskController> {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Container(
-                          height: 70.h,
-                          width: 160.w,
-                          decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(35.0.sp)),
-                            gradient: LinearGradient(
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                              colors: [
-                                Color(0xffFC6821),
-                                Color(0xffFF863D),
-                              ],
-                            ),
-                          ),
-                          child: TextButton(
-                              onPressed: () => Get.toNamed(Routes.TaskInfo),
-                              child: Text(
-                                '去赚钱',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 25.sp),
-                              ), //背景颜色
-                              style: ButtonStyle(
-                                shape: MaterialStateProperty.all(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(10.sp),
-                                    ),
-                                  ),
-                                ),
-                              )),
-                        ),
-                      ],
-                    ),
                   );
                 }
               },

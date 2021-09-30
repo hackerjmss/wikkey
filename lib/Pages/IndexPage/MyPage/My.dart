@@ -53,7 +53,7 @@ class MyPage extends GetView<MyController> {
                           Row(
                             children: [
                               Image.asset(
-                                'static/images/ing1.png',
+                                'static/images/index9.png',
                                 width: 120.w,
                                 height: 120.h,
                               ),
@@ -96,7 +96,7 @@ class MyPage extends GetView<MyController> {
                                         fontSize: 36.sp, color: Colors.white),
                                   ),
                                   SizedBox(
-                                    height: 18.h,
+                                    height: 12.h,
                                   ),
                                   Text(
                                     "账户余额",
@@ -113,7 +113,7 @@ class MyPage extends GetView<MyController> {
                                         fontSize: 36.sp, color: Colors.white),
                                   ),
                                   SizedBox(
-                                    height: 18.h,
+                                    height: 12.h,
                                   ),
                                   Text(
                                     "保证金",
@@ -130,7 +130,7 @@ class MyPage extends GetView<MyController> {
                                         fontSize: 36.sp, color: Colors.white),
                                   ),
                                   SizedBox(
-                                    height: 18.h,
+                                    height: 12.h,
                                   ),
                                   Text(
                                     "累计提现",
@@ -180,7 +180,7 @@ class MyPage extends GetView<MyController> {
                                       ],
                                     ),
                                   ),
-                                  onTap: () => null),
+                                  onTap: () => Get.toNamed(Routes.MyTask)),
                               InkWell(
                                   child: Container(
                                     child: Column(
@@ -202,7 +202,7 @@ class MyPage extends GetView<MyController> {
                                       ],
                                     ),
                                   ),
-                                  onTap: () => null),
+                                  onTap: () => Get.toNamed(Routes.Merchant)),
                               InkWell(
                                   child: Container(
                                     child: Column(

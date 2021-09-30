@@ -35,7 +35,10 @@ class MyTaskPage extends GetView<MyTaskController> {
               child: TabBarWidgetL([
                 Text("全部"),
                 Badge(
-                  badgeContent: Text('3',style: TextStyle(color: Colors.white),),
+                  badgeContent: Text(
+                    '3',
+                    style: TextStyle(color: Colors.white),
+                  ),
                   child: Text("待提交"),
                 ),
                 Text("审核中"),
@@ -54,7 +57,7 @@ class MyTaskPage extends GetView<MyTaskController> {
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 1,
                           // 设置每子元素的大小（宽高比）
-                          childAspectRatio: 2.1,
+                          childAspectRatio: 2.3,
                         ),
                         itemBuilder: (context, index) {
                           if (index == myTask.listView.length) {
@@ -142,7 +145,7 @@ class MyTaskPage extends GetView<MyTaskController> {
                                     ],
                                   ),
                                   SizedBox(
-                                    height: 24.h,
+                                    height: 20.h,
                                   ),
                                   Column(
                                     children: [
@@ -163,7 +166,7 @@ class MyTaskPage extends GetView<MyTaskController> {
                                         ],
                                       ),
                                       SizedBox(
-                                        height: 24.h,
+                                        height: 20.h,
                                       ),
                                       Row(
                                         children: [
