@@ -44,7 +44,7 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                   child: Text("添加微信账户".tr,
                       style: TextStyle(
                           fontSize: 48.sp,
-                          color: Color(0xff4B5166),
+                          color: Color(0xff2C3240),
                           fontWeight: FontWeight.bold)),
                 ),
                 Container(
@@ -54,8 +54,7 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                   child: Text("请绑定本人微信账户".tr,
                       style: TextStyle(
                           fontSize: 32.sp,
-                          color: Color(0xff4B5166),
-                          fontWeight: FontWeight.bold)),
+                          color: Color(0xff646C7F))),
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -69,7 +68,7 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                         alignment: Alignment.centerLeft,
                         child: Text(
                           '姓名',
-                          style: TextStyle(color: Color(0xff4B5166),fontSize: 32.sp),
+                          style: TextStyle(color: Color(0xff2C3240),fontSize: 32.sp),
                         ),
                       ),
                       Expanded(
@@ -79,8 +78,8 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.symmetric(
                                   vertical: 20.h, horizontal: 15.h),
-                              hintText: '请输入账户',
-                              hintStyle: TextStyle(color: Color(0xffA3B0C2),fontSize: 32.sp)),
+                              hintText: '请输入姓名',
+                              hintStyle: TextStyle(color: Color(0xffB1B8C8),fontSize: 32.sp)),
                           onChanged: null,
                           autofocus: false,
                         ),
@@ -100,7 +99,7 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                         alignment: Alignment.centerLeft,
                         child: Text(
                           '账户',
-                          style: TextStyle(color: Color(0xff4B5166),fontSize: 32.sp),
+                          style: TextStyle(color: Color(0xff2C3240),fontSize: 32.sp),
                         ),
                       ),
                       Expanded(
@@ -111,7 +110,7 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                               contentPadding: EdgeInsets.symmetric(
                                   vertical: 20.h, horizontal: 15.h),
                               hintText: '请输入账户',
-                              hintStyle: TextStyle(color: Color(0xffA3B0C2),fontSize: 32.sp)),
+                              hintStyle: TextStyle(color: Color(0xffB1B8C8),fontSize: 32.sp)),
                           onChanged: null,
                           autofocus: false,
                         ),
@@ -143,7 +142,7 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                                       "二维码".tr,
                                       style: TextStyle(
                                           fontSize: 32.sp,
-                                          color: Color(0xff4B5166)),
+                                          color: Color(0xff2C3240)),
                                     ),
                                     Container(
                                       //设置背景图片
@@ -179,25 +178,44 @@ class EditPayWeChatPay extends GetView<EditPayWeChatPayController> {
                                     ),
                                   ])),
                         ])),
-                Container(
-                  width: 1200.w,
-                  margin: EdgeInsets.only(right: 75.w, left: 75.w),
-                  child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "绑定".tr,
-                        style: TextStyle(color: Colors.white),
-                      ), //背景颜色
-                      style: ButtonStyle(backgroundColor:
-                          MaterialStateProperty.resolveWith((states) {
-                        //设置按下时的背景颜色
-                        // if (states.contains(MaterialState.pressed)) {
-                        //   return Colors.blue[200];
-                        // }
-                        //默认不使用背景颜色
-                        return Color(0xffFF5B0B);
-                      }))),
-                ),
+
+                        Container(
+                          margin: EdgeInsets.only(left: 77.w,right: 77.w),
+                      height: 88.h,
+                      width: Get.width,
+                      decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.all(Radius.circular(44.0.sp)),
+                        gradient: LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            Color(0xffFC6821),
+                            Color(0xffFF863D),
+                          ],
+                        ),
+                      ),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '绑定',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 32.sp,
+                                fontWeight: FontWeight.bold),
+                          ), //背景颜色
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(44.sp),
+                                ),
+                              ),
+                            ),
+                          )),
+                    ),
+
+                
               ],
             ),
           ),

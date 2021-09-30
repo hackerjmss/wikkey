@@ -91,33 +91,39 @@ class UpdateBank extends GetView<UpdateBankController> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 24.w, right: 24.w, top: 18.h),
-              child: Column(
-                children: [
-                  Container(
-                    width: Get.width,
-                    height: 88.h,
-                    child: TextButton(
-                        onPressed: () {
-                          Get.toNamed(Routes.EditAddBank);
-                        },
-                        child: Text(
-                          "更换银行卡".tr,
-                          style: TextStyle(color: Colors.white),
-                        ), //背景颜色
-                        style: ButtonStyle(backgroundColor:
-                            MaterialStateProperty.resolveWith((states) {
-                          //设置按下时的背景颜色
-                          // if (states.contains(MaterialState.pressed)) {
-                          //   return Colors.blue[200];
-                          // }
-                          //默认不使用背景颜色
-                          return Color(0xffFF5B0B);
-                        }))),
-                  ),
-                ],
+              margin: EdgeInsets.only(left: 77.w, right: 77.w,top: 77.h),
+              height: 88.h,
+              width: Get.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(44.0.sp)),
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Color(0xffFC6821),
+                    Color(0xffFF863D),
+                  ],
+                ),
               ),
-            )
+              child: TextButton(
+                  onPressed: () => Get.toNamed(Routes.EditAddBank),
+                  child: Text(
+                    '更换银行卡',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32.sp,
+                        fontWeight: FontWeight.bold),
+                  ), //背景颜色
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(44.sp),
+                        ),
+                      ),
+                    ),
+                  )),
+            ),
           ],
         ),
       ),
