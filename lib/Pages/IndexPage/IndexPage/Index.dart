@@ -205,7 +205,7 @@ class IndexPage extends GetView<IndexController> {
               ),
 
               Container(
-                margin: EdgeInsets.only(left: 24.w),
+                margin: EdgeInsets.only(left: 24.w,top: 30.h),
                 child: Column(
                   children: [
                     Row(
@@ -260,7 +260,7 @@ class IndexPage extends GetView<IndexController> {
                                           Radius.circular(20.sp)),
                                     ),
                                     margin: EdgeInsets.only(
-                                      top: 18.5.h,
+                                      top: 30.h,
                                       right: 24.w,
                                     ),
                                     padding: EdgeInsets.only(

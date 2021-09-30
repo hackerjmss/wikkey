@@ -312,8 +312,7 @@ class MyPage extends GetView<MyController> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(
-                    left: 24.w, right: 24.w, top: 18.h, bottom: 18.h),
+                margin: EdgeInsets.only(left: 24.w, right: 24.w, top: 18.h, bottom: 18.h),
                 padding: EdgeInsets.only(left: 24.w, right: 24.w),
                 decoration: new BoxDecoration(
                   color: Colors.white,
@@ -325,8 +324,12 @@ class MyPage extends GetView<MyController> {
                     InkWell(
                       onTap: () => null,
                       child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    width: 1.h, color: Color(0xffE6E9F0)))),
                         height: 96.h,
-                        padding: EdgeInsets.only(top: 45.h),
+                        padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -353,12 +356,15 @@ class MyPage extends GetView<MyController> {
                         ),
                       ),
                     ),
-                    Divider(),
                     InkWell(
                       onTap: () => null,
                       child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    width: 1.h, color: Color(0xffE6E9F0)))),
                         height: 96.h,
-                        padding: EdgeInsets.only(top: 32.h),
+                        padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -385,12 +391,15 @@ class MyPage extends GetView<MyController> {
                         ),
                       ),
                     ),
-                    Divider(),
                     InkWell(
                       onTap: () => Get.toNamed(Routes.Pay),
                       child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    width: 1.h, color: Color(0xffE6E9F0)))),
                         height: 96.h,
-                        padding: EdgeInsets.only(top: 32.h),
+                        padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -417,12 +426,15 @@ class MyPage extends GetView<MyController> {
                         ),
                       ),
                     ),
-                    Divider(),
                     InkWell(
                       onTap: () => null,
                       child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    width: 1.h, color: Color(0xffE6E9F0)))),
                         height: 96.h,
-                        padding: EdgeInsets.only(top: 32.h),
+                        padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -449,12 +461,15 @@ class MyPage extends GetView<MyController> {
                         ),
                       ),
                     ),
-                    Divider(),
                     InkWell(
                       onTap: () => null,
                       child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    width: 1.h, color: Color(0xffE6E9F0)))),
                         height: 96.h,
-                        padding: EdgeInsets.only(top: 32.h),
+                        padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -481,12 +496,15 @@ class MyPage extends GetView<MyController> {
                         ),
                       ),
                     ),
-                    Divider(),
                     InkWell(
                       onTap: () => null,
                       child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    width: 1.h, color: Color(0xffE6E9F0)))),
                         height: 96.h,
-                        padding: EdgeInsets.only(top: 32.h),
+                        padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -513,9 +531,6 @@ class MyPage extends GetView<MyController> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 25.h,
-                    )
                   ],
                 ),
               ),
