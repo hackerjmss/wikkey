@@ -12,7 +12,7 @@ class TabBarWidgetL extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: this.alignment,
-      height: 84.h,
+      height: 88.h,
       decoration: BoxDecoration(
           border:
               Border(bottom: BorderSide(width: 0.5, color: Color(0xffe5e5e5)))),

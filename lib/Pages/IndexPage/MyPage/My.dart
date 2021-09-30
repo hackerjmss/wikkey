@@ -328,7 +328,7 @@ class MyPage extends GetView<MyController> {
                             border: Border(
                                 bottom: BorderSide(
                                     width: 1.h, color: Color(0xffE6E9F0)))),
-                        height: 96.h,
+                        height: 108.h,
                         padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -363,7 +363,7 @@ class MyPage extends GetView<MyController> {
                             border: Border(
                                 bottom: BorderSide(
                                     width: 1.h, color: Color(0xffE6E9F0)))),
-                        height: 96.h,
+                        height: 108.h,
                         padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -398,7 +398,7 @@ class MyPage extends GetView<MyController> {
                             border: Border(
                                 bottom: BorderSide(
                                     width: 1.h, color: Color(0xffE6E9F0)))),
-                        height: 96.h,
+                        height: 108.h,
                         padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -433,7 +433,7 @@ class MyPage extends GetView<MyController> {
                             border: Border(
                                 bottom: BorderSide(
                                     width: 1.h, color: Color(0xffE6E9F0)))),
-                        height: 96.h,
+                        height: 108.h,
                         padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -468,7 +468,7 @@ class MyPage extends GetView<MyController> {
                             border: Border(
                                 bottom: BorderSide(
                                     width: 1.h, color: Color(0xffE6E9F0)))),
-                        height: 96.h,
+                        height: 108.h,
                         padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -503,7 +503,7 @@ class MyPage extends GetView<MyController> {
                             border: Border(
                                 bottom: BorderSide(
                                     width: 1.h, color: Color(0xffE6E9F0)))),
-                        height: 96.h,
+                        height: 108.h,
                         padding: EdgeInsets.only(top: 30.h,bottom: 30.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
