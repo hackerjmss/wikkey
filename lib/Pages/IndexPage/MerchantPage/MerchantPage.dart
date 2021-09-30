@@ -61,7 +61,7 @@ class MerchantPage extends GetView<MerchantPageController> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 1,
                 // 设置每子元素的大小（宽高比）
-                childAspectRatio: 1.68,
+                childAspectRatio: 1.7,
               ),
               itemBuilder: (context, index) {
                 if (index == task.listView.length) {
@@ -138,7 +138,7 @@ class MerchantPage extends GetView<MerchantPageController> {
                                       fontSize: 32.sp),
                                 ),
                                 SizedBox(
-                                  height: 24.h,
+                                  height: 20.h,
                                 ),
                                 Row(
                                   children: [
@@ -177,7 +177,7 @@ class MerchantPage extends GetView<MerchantPageController> {
                           ],
                         ),
                         SizedBox(
-                          height: 40.h,
+                          height: 36.h,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
